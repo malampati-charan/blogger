@@ -1,0 +1,39 @@
+<%- include("partials/header.ejs") %>
+  <%- include("partials/alerts.ejs") %>
+
+    <div class="container">
+      <form action="/submit" method="POST">
+        <div class="mb-3">
+          <label for="title" class="form-label">Post Title</label>
+          <input type="text" class="form-control" id="title" name="title" placeholder="A Great Title">
+        </div>
+        <div class="mb-3">
+          <label for="content" class="form-label">Post Content</label>
+          <textarea class="form-control" id="content" name="content" placeholder="Some Great Content" rows="3"></textarea>
+        </div> <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const alertBox = document.querySelector(".alert");
+        alertBox.classList.add("alert-success");
+
+        if (alertBox) {
+          setTimeout(() => {
+            alertBox.classList.remove("alert-success");
+            alertBox.style.transition = "opacity 0.5s ease";
+            alertBox.style.opacity = "0";
+
+            setTimeout(() => {
+              alertBox.remove();
+            }, 500);
+          }, 3000);
+        }
+      });
+    </script>
+
+    </body>
+
+    </html>

@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+
+  <div class="container justify-content-center">
+    <% for (let i=0; i < posts.length; i++) { %>
+      <div class="card mb-3 d-flex justify-content-center" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1738028449238-fa5ae8c33bce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">
+                <%= posts[i].title %>
+              </h5>
+              <p class="card-text">
+              <h5 class="card-title">
+                <%= posts[i].content %>
+              </h5>
+              <p class="card-text"></p>
+              </p>
+              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %>
+  </div>
+
+  </main>
+  </body>
+
+  </html>

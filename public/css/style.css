@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: "Poppins", serif;
+  background-color: #2b2b2b;
+  color: white;
+}
+
+.logo {
+  color: white;
+}
+
+.hero-section {
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 50px;
+}
+
+.hero-section h1 {
+  font-size: 5rem;
+}
+
+.hero-section img {
+  height: auto;
+  width: 10rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.fade {
+  opacity: 0; /* Initially invisible */
+  animation: fadeIn 1s ease-in-out forwards; /* Trigger fade-in animation */
+  animation-delay: 0.1s;
+}
+
+/* Keyframes for fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
